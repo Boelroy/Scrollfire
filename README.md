@@ -11,13 +11,14 @@
 ```javascript
 //simple as this!
 $('.scroll-fire').scrollFire()
+```
 
 ***
 你必须在你的想运用动画的页面添加一些data-*属性
 
 ```html
 <div class='scroll-fire' data-offset='200' data-delay='100' data-animate='someCustomAnimation'>
-
+```
 ***
 * data-offset 表示元素从离底部多长距离时元素会显示动画
 * data-delay 表示元素在触发动作后多长时间后才会显示动画
@@ -29,7 +30,7 @@ $('.scroll-fire').scrollFire()
 
 ```javascript
 $(selector).scrollFire({model:'single'});
-
+```
 ***
 而group模式表示触发一组动画，即当元素满足条件时其下的子元素的动画都会触发，当然我们要指定子元素的选择器,默认子元素的选择器为'.scroll-fire-item'
 
@@ -38,6 +39,7 @@ $(selector).scrollFire({
         model: 'single',
         groupItem: '.scroll-fire-item'
     });
+```
 
 ## License
 
