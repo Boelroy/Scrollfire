@@ -7,6 +7,8 @@
 @description 滚动时动态显示动画的jQuery插件
 @description jQuery plugins show the animation when scroll the page
 
+@version 0.1.0
+
 */
 
 //初始化jQuery插件
@@ -33,7 +35,8 @@
         });
     };
     $.fn.scrollFire.default = {
-        model: 'single'
+        model: 'single',
+        groupItem: 'scroll-fire-item'
     }
 }(jQuery));
 
@@ -41,6 +44,7 @@
 function ScrollFire(selector, option) {
     this.selector = selector;
     this.model = option.model;
+    this.groupItem = option.groupItem;
 };
 
 ScrollFire.prototype = {
@@ -87,7 +91,7 @@ ScrollFire.prototype = {
         var el = this.selector;
         switch(this.model){
             case 'group':
-                el.find('.scroll-fire-item').each(function(idx) {
+                el.find(this.groupItem).each(function(idx) {
                     $(this).css( { 
                         opacity:1
                     });
@@ -142,7 +146,7 @@ ScrollFire.prototype = {
 
             case 'group':
 
-                el.find('.scroll-fire-item').each(function(idx) {
+                el.find(this.groupItem).each(function(idx) {
                     el.css( { 
                         opacity:'none'
                     });
