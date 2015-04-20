@@ -25,7 +25,8 @@ $('.scroll-fire').scrollFire()
 * data-animate 表示显示动画类型的class名,这里推荐[Animate.css](http://daneden.github.io/animate.css/)
 
 ### Single or Group
-*** scrollfire.js 默认的single模式表示对于当前元素只要满足条件就会触发动画
+*** 
+scrollfire.js 默认的single模式表示对于当前元素只要满足条件就会触发动画
 当然你可以显示调用
 
 ```javascript
