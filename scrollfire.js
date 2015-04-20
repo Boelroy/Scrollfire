@@ -35,8 +35,8 @@
         });
     };
     $.fn.scrollFire.default = {
-        model: 'single',
-        groupItem: 'scroll-fire-item'
+        model: 'single', 
+        groupItem: '.scroll-fire-item'
     }
 }(jQuery));
 
